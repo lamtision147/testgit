@@ -7,12 +7,12 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 
-contract Erc721 is ERC721, ERC721Pausable, Ownable, ERC721Burnable {
+contract Erc7212 is ERC721, ERC721Pausable, Ownable, ERC721Burnable {
     uint256 private _nextTokenId;
     string private _contractURI;
 
     constructor(address initialOwner)
-        ERC721("erc721", "E721")
+        ERC721("erc7212", "E7211")
         Ownable(initialOwner)
     {
         _contractURI = "https://metadata.boomland.io/contract-metadata"; // URL của contractURI, có thể cập nhật sau
