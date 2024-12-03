@@ -7,13 +7,27 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "EnforcedPause",
-				"type": "error"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "ExpectedPause",
-				"type": "error"
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
 			},
 			{
 				"anonymous": false,
@@ -43,49 +57,48 @@
 			},
 			{
 				"inputs": [],
-				"name": "paused",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "address",
 						"name": "",
-						"type": "bool"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
-			"details": "Contract module which allows children to implement an emergency stop mechanism that can be triggered by an authorized account. This module is used through inheritance. It will make available the modifiers `whenNotPaused` and `whenPaused`, which can be applied to the functions of your contract. Note that they will not be pausable by simply including this module, only once the modifiers are put in place.",
-			"errors": {
-				"EnforcedPause()": [
-					{
-						"details": "The operation failed because the contract is paused."
-					}
-				],
-				"ExpectedPause()": [
-					{
-						"details": "The operation failed because the contract is not paused."
-					}
-				]
-			},
-			"events": {
-				"Paused(address)": {
-					"details": "Emitted when the pause is triggered by `account`."
-				},
-				"Unpaused(address)": {
-					"details": "Emitted when the pause is lifted by `account`."
-				}
-			},
 			"kind": "dev",
-			"methods": {
-				"constructor": {
-					"details": "Initializes the contract in unpaused state."
-				},
-				"paused()": {
-					"details": "Returns true if the contract is paused, and false otherwise."
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -96,7 +109,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/erc721_flattened.sol": "Pausable"
+			"contracts/selfErc721.sol": "Pausable"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -110,11 +123,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/erc721_flattened.sol": {
-			"keccak256": "0xf1dbe2daf6563cd385a9ed8cf2cb46e929c6902eef5ac5d197871c9a95a6e657",
+		"contracts/selfErc721.sol": {
+			"keccak256": "0xe50b979ba1a3319f8c4ed47095e846a00a3c97fd6dda11b124e8ffa9a66de854",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://87632383272061ce4879fde03f1376737692dcda9396da83618ea57e9f737c93",
-				"dweb:/ipfs/QmSUK6k6NcTAvviPMyeJUdhzVZP98qVimF5BFWRDbaXFff"
+				"bzz-raw://26e2a0953bf56575a68466a1a052df60663005e0296fc30bb6613f4783b80885",
+				"dweb:/ipfs/QmTprdaE6ncJsYzpGw4LGQK76JZByBu3DFXw7RNiq7ZD6G"
 			]
 		}
 	},

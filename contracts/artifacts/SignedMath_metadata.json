@@ -19,7 +19,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/erc721_flattened.sol": "SignedMath"
+			"contracts/vutesterc20_flattened.sol": "SignedMath"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -33,11 +33,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/erc721_flattened.sol": {
-			"keccak256": "0xf1dbe2daf6563cd385a9ed8cf2cb46e929c6902eef5ac5d197871c9a95a6e657",
+		"contracts/vutesterc20_flattened.sol": {
+			"keccak256": "0xdb53b7b53a38e26a8b2bc8f23c92e3c9780aec5518cf70e1a19d5561d286316a",
 			"urls": [
-				"bzz-raw://87632383272061ce4879fde03f1376737692dcda9396da83618ea57e9f737c93",
-				"dweb:/ipfs/QmSUK6k6NcTAvviPMyeJUdhzVZP98qVimF5BFWRDbaXFff"
+				"bzz-raw://461a85b6a8990def10b42000bf819f569f2d8006e6651aa6f73c0e5f99b93a53",
+				"dweb:/ipfs/QmNoWvg5sUxP8mXj8G7fgxahCmXeTiFEeV8Bhs97mERuAj"
 			]
 		}
 	},

@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.15.1.
+ * Original file: /npm/a@3.0.1/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+delete require.cache[module.id];var a_mock=require("a_mock");module.exports={mock:a_mock.mock,expectRequire:a_mock.expectRequire,requireMock:a_mock.requireMock,then:a_mock.then};
+//# sourceMappingURL=/sm/03e3caf703ca72fbbac1a19d05e502eb7f115cefe7483ea795261f56d55d13ea.map

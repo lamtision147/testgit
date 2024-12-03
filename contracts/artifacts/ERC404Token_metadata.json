@@ -1,0 +1,189 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "metadataURI",
+						"type": "string"
+					}
+				],
+				"name": "TokenMinted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getMetadata",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getTokenOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "metadataURI",
+						"type": "string"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Implements the abstract ERC404 contract",
+			"kind": "dev",
+			"methods": {},
+			"title": "Implementation of ERC404",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getMetadata(uint256)": {
+					"notice": "Returns the metadata URI of a token"
+				},
+				"getTokenOwner(uint256)": {
+					"notice": "Returns the owner of a token"
+				},
+				"mint(address,string)": {
+					"notice": "Mints a new token to the specified address with metadata URI"
+				},
+				"totalSupply()": {
+					"notice": "Returns the total supply of tokens"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/abCodeERC404.sol": "ERC404Token"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/abCodeERC404.sol": {
+			"keccak256": "0x994d397e2e1f2c66015bf79f87ec5480436bedaaefeee09ca415c6679d42b640",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9881cdf07967820647a84b97849f6c8b05a5caffa84975088a239c2ab3be24a1",
+				"dweb:/ipfs/QmQxT88PiD3hJM7emNDLSkyFe8ksAuUFEjaLNkzhFe6C9h"
+			]
+		},
+		"contracts/abERC404.sol": {
+			"keccak256": "0x525c2641d54e84d95f23ce75b0091920027fd8f128253f263e0278132ecb1890",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://00879abbff5fcaf3902ddd1ee1e6b649d66e5a440265f76b2bd6288088c6f81f",
+				"dweb:/ipfs/QmPNc1idKVsFydsEa1hZiCXrTVycfvSW3E6KCcVr7sSPN7"
+			]
+		}
+	},
+	"version": 1
+}

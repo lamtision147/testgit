@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/tabserc404.sol": "ERC404"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/tabserc404.sol": {
+			"keccak256": "0x3c74db3d23300ab824f0f4ead9919ef408f2e2e0afe91d8199497095e8356594",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://208b6d414e9d08f84acdc69bd862449673cec5f1dc2fd59a4618820e8ac72a48",
+				"dweb:/ipfs/QmaiRcappv5ZiRTWJ5ohEeTikUBr1qVujCTg43mcjFmQWf"
+			]
+		}
+	},
+	"version": 1
+}

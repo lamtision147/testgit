@@ -1,0 +1,9 @@
+/**
+ * Minified by jsDelivr using Terser v3.14.1.
+ * Original file: /npm/c@1.1.1/src/cli.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+#!/usr/bin/env node
+"use strict";const commandFunctions=require("./commands"),colors=require("colors/safe"),[,,...arg]=process.argv;class Command{constructor(o,r,e,s,n){this.shortFlag=o,this.action=r,this.argCount=e,this.method=s,this.fallback=n}}const commands=[new Command("-h","help",1,()=>{commandFunctions.help(),process.exit(0)},()=>{error(),process.exit(1)}),new Command("-l","list",2,()=>{commandFunctions.list(arg[1]),process.exit(0)},()=>{commandFunctions.list("."),process.exit(0)}),new Command("-rm","remove",2,()=>{commandFunctions.delete(arg[1]),process.exit(0)},()=>{error(),process.exit(1)}),new Command("-s","set",3,()=>{commandFunctions.set(arg[1],arg[2]),process.exit(0)},()=>{error(),process.exit(1)}),new Command("-v","version",1,()=>{commandFunctions.version(),process.exit(0)},()=>{error(),process.exit(1)})];for(const o of commands)if(arg[0]==o.action||arg[0]==o.shortFlag)switch(arg.length){case o.argCount:o.method();break;case o.argCount-1:o.fallback();break;default:error()}function error(){return console.error(colors.red("\nInvalid flag, please try the following:\n")),commandFunctions.help(),1}error();
+//# sourceMappingURL=/sm/09dbe455002cdd2e414c06955cc09e860d980cacaa77d4ce4e215858038f5b44.map

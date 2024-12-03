@@ -74,10 +74,10 @@
 	},
 	"sources": {
 		"contracts/erc721_flattened.sol": {
-			"keccak256": "0xf1dbe2daf6563cd385a9ed8cf2cb46e929c6902eef5ac5d197871c9a95a6e657",
+			"keccak256": "0xf680772611d55ee5cfa872923789de48f907f6f92fe7f9a76f24cfa604114cd8",
 			"urls": [
-				"bzz-raw://87632383272061ce4879fde03f1376737692dcda9396da83618ea57e9f737c93",
-				"dweb:/ipfs/QmSUK6k6NcTAvviPMyeJUdhzVZP98qVimF5BFWRDbaXFff"
+				"bzz-raw://51069880b7b29d414dfd3bda96c1316ce9dc54fbb182248437515f84cc6919bf",
+				"dweb:/ipfs/QmSGgZYHFfYaWaGg63fbdBvzSrNodZkm1CrJhhWiCbHYZe"
 			]
 		}
 	},

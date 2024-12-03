@@ -1,0 +1,720 @@
+{
+	"id": "275eaa8225380aee6d76201c86d18dfe",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.22",
+	"solcLongVersion": "0.8.22+commit.4fc1097e",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/abERC404.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.22;\r\n\r\n/// @title ERC404 - Abstract Contract for Unique Tokens\r\n/// @dev This abstract contract defines the core interface for ERC404 tokens.\r\nabstract contract ERC404 {\r\n    // Event emitted when a new token is minted\r\n    event TokenMinted(address indexed to, uint256 indexed tokenId, string metadataURI);\r\n\r\n    /// @notice Mints a new token to the specified address with metadata URI\r\n    /// @param to Address to mint the token to\r\n    /// @param metadataURI URI pointing to the token's metadata\r\n    function mint(address to, string memory metadataURI) public virtual;\r\n\r\n    /// @notice Returns the metadata URI of a token\r\n    /// @param tokenId Token ID to query\r\n    /// @return Metadata URI of the token\r\n    function getMetadata(uint256 tokenId) public view virtual returns (string memory);\r\n\r\n    /// @notice Returns the owner of a token\r\n    /// @param tokenId Token ID to query\r\n    /// @return Address of the token owner\r\n    function getTokenOwner(uint256 tokenId) public view virtual returns (address);\r\n\r\n    /// @notice Returns the total supply of tokens\r\n    /// @return Total number of tokens\r\n    function totalSupply() public view virtual returns (uint256);\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/abERC404.sol": {
+				"ERC404": {
+					"abi": [
+						{
+							"anonymous": false,
+							"inputs": [
+								{
+									"indexed": true,
+									"internalType": "address",
+									"name": "to",
+									"type": "address"
+								},
+								{
+									"indexed": true,
+									"internalType": "uint256",
+									"name": "tokenId",
+									"type": "uint256"
+								},
+								{
+									"indexed": false,
+									"internalType": "string",
+									"name": "metadataURI",
+									"type": "string"
+								}
+							],
+							"name": "TokenMinted",
+							"type": "event"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "uint256",
+									"name": "tokenId",
+									"type": "uint256"
+								}
+							],
+							"name": "getMetadata",
+							"outputs": [
+								{
+									"internalType": "string",
+									"name": "",
+									"type": "string"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "uint256",
+									"name": "tokenId",
+									"type": "uint256"
+								}
+							],
+							"name": "getTokenOwner",
+							"outputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "to",
+									"type": "address"
+								},
+								{
+									"internalType": "string",
+									"name": "metadataURI",
+									"type": "string"
+								}
+							],
+							"name": "mint",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "totalSupply",
+							"outputs": [
+								{
+									"internalType": "uint256",
+									"name": "",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"details": "This abstract contract defines the core interface for ERC404 tokens.",
+						"kind": "dev",
+						"methods": {
+							"getMetadata(uint256)": {
+								"params": {
+									"tokenId": "Token ID to query"
+								},
+								"returns": {
+									"_0": "Metadata URI of the token"
+								}
+							},
+							"getTokenOwner(uint256)": {
+								"params": {
+									"tokenId": "Token ID to query"
+								},
+								"returns": {
+									"_0": "Address of the token owner"
+								}
+							},
+							"mint(address,string)": {
+								"params": {
+									"metadataURI": "URI pointing to the token's metadata",
+									"to": "Address to mint the token to"
+								}
+							},
+							"totalSupply()": {
+								"returns": {
+									"_0": "Total number of tokens"
+								}
+							}
+						},
+						"title": "ERC404 - Abstract Contract for Unique Tokens",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"getMetadata(uint256)": "a574cea4",
+							"getTokenOwner(uint256)": "a5cd761f",
+							"mint(address,string)": "d0def521",
+							"totalSupply()": "18160ddd"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.22+commit.4fc1097e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"name\":\"TokenMinted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getMetadata\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getTokenOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This abstract contract defines the core interface for ERC404 tokens.\",\"kind\":\"dev\",\"methods\":{\"getMetadata(uint256)\":{\"params\":{\"tokenId\":\"Token ID to query\"},\"returns\":{\"_0\":\"Metadata URI of the token\"}},\"getTokenOwner(uint256)\":{\"params\":{\"tokenId\":\"Token ID to query\"},\"returns\":{\"_0\":\"Address of the token owner\"}},\"mint(address,string)\":{\"params\":{\"metadataURI\":\"URI pointing to the token's metadata\",\"to\":\"Address to mint the token to\"}},\"totalSupply()\":{\"returns\":{\"_0\":\"Total number of tokens\"}}},\"title\":\"ERC404 - Abstract Contract for Unique Tokens\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getMetadata(uint256)\":{\"notice\":\"Returns the metadata URI of a token\"},\"getTokenOwner(uint256)\":{\"notice\":\"Returns the owner of a token\"},\"mint(address,string)\":{\"notice\":\"Mints a new token to the specified address with metadata URI\"},\"totalSupply()\":{\"notice\":\"Returns the total supply of tokens\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/abERC404.sol\":\"ERC404\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/abERC404.sol\":{\"keccak256\":\"0x525c2641d54e84d95f23ce75b0091920027fd8f128253f263e0278132ecb1890\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://00879abbff5fcaf3902ddd1ee1e6b649d66e5a440265f76b2bd6288088c6f81f\",\"dweb:/ipfs/QmPNc1idKVsFydsEa1hZiCXrTVycfvSW3E6KCcVr7sSPN7\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {
+							"getMetadata(uint256)": {
+								"notice": "Returns the metadata URI of a token"
+							},
+							"getTokenOwner(uint256)": {
+								"notice": "Returns the owner of a token"
+							},
+							"mint(address,string)": {
+								"notice": "Mints a new token to the specified address with metadata URI"
+							},
+							"totalSupply()": {
+								"notice": "Returns the total supply of tokens"
+							}
+						},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/abERC404.sol": {
+				"ast": {
+					"absolutePath": "contracts/abERC404.sol",
+					"exportedSymbols": {
+						"ERC404": [
+							41
+						]
+					},
+					"id": 42,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".22"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						},
+						{
+							"abstract": true,
+							"baseContracts": [],
+							"canonicalName": "ERC404",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "61:136:0",
+								"text": "@title ERC404 - Abstract Contract for Unique Tokens\n @dev This abstract contract defines the core interface for ERC404 tokens."
+							},
+							"fullyImplemented": false,
+							"id": 41,
+							"linearizedBaseContracts": [
+								41
+							],
+							"name": "ERC404",
+							"nameLocation": "215:6:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"anonymous": false,
+									"eventSelector": "df92894dc4675a7333caa5903b69cf5d8e8ec0d3f361c88207b6688e525703bb",
+									"id": 10,
+									"name": "TokenMinted",
+									"nameLocation": "284:11:0",
+									"nodeType": "EventDefinition",
+									"parameters": {
+										"id": 9,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 4,
+												"indexed": true,
+												"mutability": "mutable",
+												"name": "to",
+												"nameLocation": "312:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 10,
+												"src": "296:18:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 3,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "296:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 6,
+												"indexed": true,
+												"mutability": "mutable",
+												"name": "tokenId",
+												"nameLocation": "332:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 10,
+												"src": "316:23:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "316:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 8,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "metadataURI",
+												"nameLocation": "348:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 10,
+												"src": "341:18:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 7,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "341:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "295:65:0"
+									},
+									"src": "278:83:0"
+								},
+								{
+									"documentation": {
+										"id": 11,
+										"nodeType": "StructuredDocumentation",
+										"src": "369:185:0",
+										"text": "@notice Mints a new token to the specified address with metadata URI\n @param to Address to mint the token to\n @param metadataURI URI pointing to the token's metadata"
+									},
+									"functionSelector": "d0def521",
+									"id": 18,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "mint",
+									"nameLocation": "569:4:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 16,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 13,
+												"mutability": "mutable",
+												"name": "to",
+												"nameLocation": "582:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 18,
+												"src": "574:10:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 12,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "574:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 15,
+												"mutability": "mutable",
+												"name": "metadataURI",
+												"nameLocation": "600:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 18,
+												"src": "586:25:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 14,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "586:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "573:39:0"
+									},
+									"returnParameters": {
+										"id": 17,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "627:0:0"
+									},
+									"scope": 41,
+									"src": "560:68:0",
+									"stateMutability": "nonpayable",
+									"virtual": true,
+									"visibility": "public"
+								},
+								{
+									"documentation": {
+										"id": 19,
+										"nodeType": "StructuredDocumentation",
+										"src": "636:132:0",
+										"text": "@notice Returns the metadata URI of a token\n @param tokenId Token ID to query\n @return Metadata URI of the token"
+									},
+									"functionSelector": "a574cea4",
+									"id": 26,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "getMetadata",
+									"nameLocation": "783:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 22,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 21,
+												"mutability": "mutable",
+												"name": "tokenId",
+												"nameLocation": "803:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "795:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 20,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "795:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "794:17:0"
+									},
+									"returnParameters": {
+										"id": 25,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 24,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "841:13:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 23,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "841:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "840:15:0"
+									},
+									"scope": 41,
+									"src": "774:82:0",
+									"stateMutability": "view",
+									"virtual": true,
+									"visibility": "public"
+								},
+								{
+									"documentation": {
+										"id": 27,
+										"nodeType": "StructuredDocumentation",
+										"src": "864:126:0",
+										"text": "@notice Returns the owner of a token\n @param tokenId Token ID to query\n @return Address of the token owner"
+									},
+									"functionSelector": "a5cd761f",
+									"id": 34,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "getTokenOwner",
+									"nameLocation": "1005:13:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 30,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 29,
+												"mutability": "mutable",
+												"name": "tokenId",
+												"nameLocation": "1027:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 34,
+												"src": "1019:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 28,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "1019:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1018:17:0"
+									},
+									"returnParameters": {
+										"id": 33,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 32,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 34,
+												"src": "1065:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 31,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "1065:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1064:9:0"
+									},
+									"scope": 41,
+									"src": "996:78:0",
+									"stateMutability": "view",
+									"virtual": true,
+									"visibility": "public"
+								},
+								{
+									"documentation": {
+										"id": 35,
+										"nodeType": "StructuredDocumentation",
+										"src": "1082:86:0",
+										"text": "@notice Returns the total supply of tokens\n @return Total number of tokens"
+									},
+									"functionSelector": "18160ddd",
+									"id": 40,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "totalSupply",
+									"nameLocation": "1183:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 36,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "1194:2:0"
+									},
+									"returnParameters": {
+										"id": 39,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 38,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 40,
+												"src": "1226:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 37,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "1226:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1225:9:0"
+									},
+									"scope": 41,
+									"src": "1174:61:0",
+									"stateMutability": "view",
+									"virtual": true,
+									"visibility": "public"
+								}
+							],
+							"scope": 42,
+							"src": "197:1041:0",
+							"usedErrors": [],
+							"usedEvents": [
+								10
+							]
+						}
+					],
+					"src": "33:1207:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
